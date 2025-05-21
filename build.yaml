@@ -13,9 +13,9 @@
 #
 
 include:
-  - board: nrf52840dk_nrf52840
+  - board: nrfmicro_13
     shield: klor_left
-  - board: nrf52840dk_nrf52840
+  - board: nrfmicro_13
     shield: klor_right
 # - board: nice_nano_v2
 #    shield: settings_reset
