@@ -46,6 +46,11 @@
                 key-positions = <0 1>;
                 bindings = <&kp ESC>;
             };
+     totp: totp {
+                compatible = "zmk,behavior-totp";
+                label = "TOTP";
+                #binding-cells = <0>;
+            };
     };
 
 
