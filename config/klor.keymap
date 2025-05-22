@@ -42,6 +42,16 @@
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
+
+        ukrainian_x {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <32 33>;
+        };
+
+        ukrainian_i {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <34 33>;
+        };
     };
 
     keymap {
