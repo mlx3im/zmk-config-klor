@@ -35,8 +35,12 @@
                 totp: totp {
             compatible = "zmk,behavior-totp";
             label = "TOTP";
-            #binding-cells = <0>;
-            bindings = <&kp>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+
         };
     };
 
