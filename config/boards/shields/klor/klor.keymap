@@ -43,7 +43,6 @@
                 bindings = <&totp_gen>;
             };
         };
-    };
 
    combos {
           compatible = "zmk,combos";
