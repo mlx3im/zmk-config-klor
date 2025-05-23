@@ -52,7 +52,7 @@
               key-positions = <0 1>;
               bindings = <&kp ESC>;
             };
-
+   };
    macros {
         totp_gen: totp_generator {
             label = "TOTP_GEN";
@@ -61,12 +61,7 @@
             tap-ms = <1>;
             bindings = <&kp F24>; // Dummy key to trigger our custom handler
         };
-    };
-};
-
-    };
-
-
+   };
 
         keymap {
                 compatible = "zmk,keymap";
