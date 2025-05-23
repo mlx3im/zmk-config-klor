@@ -15,6 +15,7 @@
 include:
   - board: nrfmicro_13
     shield: klor_left
+    snippet: zmk-usb-logging
   - board: nrfmicro_13
     shield: klor_right
 # - board: nice_nano_v2
