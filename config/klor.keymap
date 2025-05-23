@@ -61,16 +61,16 @@
               key-positions = <38 41>;
               layers = <0>;
           };
-     };
+   };
 
-     macros {
-    totp: totp {
+   macros {
+     totp: totp {
         compatible = "zmk,behavior-macro";
         label = "TOTP";
         #binding-cells = <0>;
         bindings = <&macro_tap &kp F13 &kp F14 &kp F15>;
-    };
-};
+     };
+   };
 
         keymap {
           
