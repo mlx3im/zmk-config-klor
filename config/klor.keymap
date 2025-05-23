@@ -32,6 +32,11 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+                totp: totp {
+            compatible = "zmk,behavior-totp";
+            label = "TOTP";
+            #binding-cells = <0>;
+        };
     };
 
     combos {
