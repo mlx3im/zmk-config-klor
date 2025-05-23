@@ -32,15 +32,10 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-                totp: totp {
+        totp: totp {
             compatible = "zmk,behavior-totp";
             label = "TOTP";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-            tapping-term-ms = <150>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-
+            #binding-cells = <0>;
         };
     };
 
