@@ -61,7 +61,7 @@
               key-positions = <38 41>;
               layers = <0>;
           };
-   };
+     };
 
    macros {
      totp: totp {
@@ -187,4 +187,5 @@
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
+    };
 };
