@@ -32,6 +32,16 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        tap_preffered: tap_preffered {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_PREFFERED";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     combos {
@@ -82,10 +92,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-                  &kp Q  &kp W  &kp E               &kp R             &kp T                                  &kp Y    &kp U                &kp I      &kp O    &kp P
-&kp TAB           &kp A  &kp S  &kp D               &hm LEFT_SHIFT F  &kp G                                  &kp H    &hm RIGHT_SHIFT J    &kp K      &kp L    &kp SEMICOLON  &kp SQT
-&mt ESCAPE GRAVE  &kp Z  &kp X  &kp C               &kp V             &kp B         &kp C_MUTE  &kp K_SLEEP  &kp N    &kp M                &kp COMMA  &kp DOT  &kp FSLH       &kp BSLH
-                                &mt LEFT_ALT LCTRL  &lt LOWER SPACE   &kp LEFT_GUI  &trans      &trans       &kp RET  &lt RAISE BACKSPACE  &kp BSPC
+                  &kp Q  &kp W  &kp E         &kp R             &kp T                                                          &kp Y    &kp U                &kp I      &kp O    &kp P
+&kp TAB           &kp A  &kp S  &kp D         &hm LEFT_SHIFT F  &kp G                                                          &kp H    &hm RIGHT_SHIFT J    &kp K      &kp L    &kp SEMICOLON  &kp SQT
+&mt ESCAPE GRAVE  &kp Z  &kp X  &kp C         &kp V             &kp B                                 &kp C_MUTE  &kp K_SLEEP  &kp N    &kp M                &kp COMMA  &kp DOT  &kp FSLH       &kp BSLH
+                                &kp LEFT_ALT  &lt LOWER SPACE   &tap_preffered LEFT_GUI LEFT_CONTROL  &trans      &trans       &kp RET  &lt RAISE BACKSPACE  &kp BSPC
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -110,10 +120,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-                &kp F1           &kp F2       &kp F3     &kp F4      &kp F5                           &kp F6                  &kp F7           &kp F8             &kp F9                &kp F10
-&kp MINUS       &kp N1           &kp N2       &kp N3     &kp N4      &kp N5                           &kp N6                  &kp N7           &kp N8             &kp N9                &kp N0                 &kp PLUS
-&kp UNDERSCORE  &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PERCENT  &none  &kp C_SLEEP  &kp CARET               &kp AMPERSAND    &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp KP_EQUAL
-                                              &none      &none       &none        &none  &none        &mt RGUI RIGHT_CONTROL  &lt 3 BACKSPACE  &kp RIGHT_CONTROL
+                &kp F1           &kp F2       &kp F3     &kp F4      &kp F5                           &kp F6                             &kp F7           &kp F8             &kp F9                &kp F10
+&kp MINUS       &kp N1           &kp N2       &kp N3     &kp N4      &kp N5                           &kp N6                             &kp N7           &kp N8             &kp N9                &kp N0                 &kp PLUS
+&kp UNDERSCORE  &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PERCENT  &none  &kp C_SLEEP  &kp CARET                          &kp AMPERSAND    &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp KP_EQUAL
+                                              &none      &none       &none        &none  &none        &tap_preffered RGUI RIGHT_CONTROL  &lt 3 BACKSPACE  &kp RIGHT_CONTROL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
