@@ -6,7 +6,15 @@
 
 #include "klor.dtsi"
 
+/ {
+    chosen {
+        zmk,deep-sleep-wakeup-sources = <&kscan0>;
+    };
+};
+
 &kscan0 {
+	status = "okay";
+    	wakeup-source;
 	col-gpios
 		= <&pro_micro 19 GPIO_ACTIVE_HIGH>
 		, <&pro_micro 18 GPIO_ACTIVE_HIGH>
